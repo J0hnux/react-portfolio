@@ -8,6 +8,7 @@ const HeaderPanel = () => {
           <li>Contact</li>
         </ul>
       </nav>
+      <button>3 Bars</button> {/* That shows on mobile */}
     </header>
   );
 };
