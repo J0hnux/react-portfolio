@@ -11,8 +11,8 @@
 body {
   margin: 0;
 
-  //width: 90%;
-  //margin-inline: auto;
+  // width: 90%;
+  // margin-inline: auto;
 }
 
 .mobile-nav {
@@ -41,7 +41,7 @@ body {
 .header {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -61,6 +61,13 @@ ul {
 
 .section {
   margin-top: 5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-slate400);
 }
 
 @media (min-width: 475px) {
@@ -83,23 +90,25 @@ ul {
 
 
   .header {
-    position: relative;
-
     button.mobile__nav_btn {
       display: none;
     }
 
     .right__header_panel {
-      position: absolute;
-      right: 0;
       margin-right: 0.75rem;
 
       button {
         padding: 0.75rem;
+        border: 1px solid #fff;
+      }
+
+      .btn__toggle_darklight {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 100%;
       }
 
       .btn__resume {
-        border: 1px solid #fff;
         border-radius: 6px;
       }
     }
