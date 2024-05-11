@@ -41,7 +41,7 @@ body {
 .header {
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -80,11 +80,28 @@ ul {
     max-width: 768px
   }
 
+
+
   .header {
+    position: relative;
 
-
-    button {
+    button.mobile__nav_btn {
       display: none;
+    }
+
+    .right__header_panel {
+      position: absolute;
+      right: 0;
+      margin-right: 0.75rem;
+
+      button {
+        padding: 0.75rem;
+      }
+
+      .btn__resume {
+        border: 1px solid #fff;
+        border-radius: 6px;
+      }
     }
   }
 }
@@ -117,6 +134,10 @@ ul {
 
 
     nav {
+      display: none;
+    }
+
+    .right__header_panel {
       display: none;
     }
   }
