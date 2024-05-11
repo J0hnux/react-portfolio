@@ -53,10 +53,38 @@ body {
   }
 }
 
+.hero {
+
+  .hero__inner__container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid blue;
+  }
+
+  img {
+    width: 20rem;
+    height: 25rem;
+  }
+}
+
 ul {
   display: flex;
   gap: 1.25rem;
   list-style: none;
+
+
+  li {
+
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--clr-rose);
+      }
+    }
+  }
 }
 
 .section {
@@ -98,8 +126,7 @@ footer {
       margin-right: 0.75rem;
 
       button {
-        padding: 0.75rem;
-        border: 1px solid #fff;
+        color: #fff;
       }
 
       .btn__toggle_darklight {
@@ -110,6 +137,8 @@ footer {
 
       .btn__resume {
         border-radius: 6px;
+        padding: 0.75rem;
+        border: 1px solid #fff;
       }
     }
   }
