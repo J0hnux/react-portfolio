@@ -5,7 +5,7 @@
 }
 
 * {
-  //border: 1px solid red;
+  //border: 1px solid blue;
 }
 
 body {
@@ -63,15 +63,21 @@ ul {
   margin-top: 5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 475px) {
   .container {
-    max-width: 1024px;
+    max-width: 475px
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 768px
   }
 
   .header {
@@ -83,6 +89,28 @@ ul {
   }
 }
 
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px
+  }
+
+  .section {
+    margin-top: 10rem
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px
+  }
+}
+
 // Removes nav
 @media (max-width: 767px) {
   .header {
@@ -91,17 +119,5 @@ ul {
     nav {
       display: none;
     }
-  }
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
   }
 }
