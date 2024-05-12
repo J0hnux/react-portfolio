@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    padding: 0 9rem;
+
+    img {
+        width: 20rem;
+        height: 25rem;
+    }
+}
+
+.about__box {
+    max-width: 40rem;
+}
+
+.frontend__color {
+    color: red;
+}
