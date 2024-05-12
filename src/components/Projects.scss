@@ -1,0 +1,14 @@
+.about {
+    display: flex;
+
+    img {
+        width: 20rem;
+        height: 25rem;
+    }
+}
+
+.project__card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
