@@ -53,20 +53,6 @@ body {
   }
 }
 
-.hero {
-
-  .hero__inner__container {
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid blue;
-  }
-
-  img {
-    width: 20rem;
-    height: 25rem;
-  }
-}
-
 ul {
   display: flex;
   gap: 1.25rem;
@@ -93,90 +79,12 @@ ul {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: var(--clr-slate400);
-}
 
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px
-  }
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px
-  }
-
-
-
-  .header {
-    button.mobile__nav_btn {
-      display: none;
-    }
-
-    .right__header_panel {
-      margin-right: 0.75rem;
-
-      button {
-        color: #fff;
-      }
-
-      .btn__toggle_darklight {
-        margin-right: 0.5rem;
-        padding: 0.5rem;
-        border-radius: 100%;
-      }
-
-      .btn__resume {
-        border-radius: 6px;
-        padding: 0.75rem;
-        border: 1px solid #fff;
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px
-  }
-
-  .section {
-    margin-top: 10rem
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px
-  }
-}
-
-// Removes nav
-@media (max-width: 767px) {
-  .header {
-
-
-    nav {
-      display: none;
-    }
-
-    .right__header_panel {
-      display: none;
-    }
+  .socials__container {
+    display: flex;
+    gap: 1.25rem;
   }
 }
