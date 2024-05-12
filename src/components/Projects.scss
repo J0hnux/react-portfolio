@@ -1,14 +1,19 @@
-.about {
-    display: flex;
-
-    img {
-        width: 20rem;
-        height: 25rem;
-    }
-}
-
 .project__card_container {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 35rem;
+    margin: 0 auto;
+    gap: 1rem;
+
+    img {
+        border: 1px solid #5f5f5f;
+        width: 40rem;
+        height: 10rem;
+    }
+}
+
+.project__buttons__container {
+    display: flex;
+    gap: 1rem;
 }
