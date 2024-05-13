@@ -1,12 +1,40 @@
+@import './utilities.scss';
+
 @media (min-width: 475px) {
     .container {
         max-width: 475px
+    }
+
+    .hero {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
     }
 }
 
 @media (min-width: 640px) {
     .container {
         max-width: 640px
+    }
+
+    .hero {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
     }
 }
 
@@ -42,6 +70,32 @@
             }
         }
     }
+
+    .hero {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+
+    .about {
+        display: block;
+        padding: 0 9rem;
+
+        img {
+            display: block;
+            width: 20rem;
+            height: 25rem;
+        }
+    }
+
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
+    }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -52,11 +106,30 @@
     .section {
         margin-top: 10rem
     }
+
+    .hero {
+        h1 {
+            font-size: 6rem;
+        }
+    }
+
+    .projects {
+        .project__cards {
+            display: block;
+        }
+    }
 }
 
 @media (min-width: 1280px) {
     .container {
         max-width: 1280px
+    }
+
+    .projects {
+        .project__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -64,7 +137,23 @@
     .container {
         max-width: 1536px
     }
+
+    .projects {
+        .project__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
 
 // Removes nav
 @media (max-width: 767px) {
