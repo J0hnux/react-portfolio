@@ -1,14 +1,24 @@
+import RightHeaderPanel from "./HeaderPanel/RightHeaderPanel";
+import "./HeaderPanel.scss";
+
 const HeaderPanel = () => {
   return (
     <header className="header container">
       <nav>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
-      <button>
+      {/* 3 Bar Line Button */}
+      <button className="mobile__nav_btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -25,6 +35,7 @@ const HeaderPanel = () => {
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
+      <RightHeaderPanel />
     </header>
   );
 };
