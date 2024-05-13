@@ -1,6 +1,6 @@
 const ProjectButtons = () => {
   return (
-    <div>
+    <div className="project__buttons__container">
       <button>Visit website</button>
       <button>View on Github</button>
     </div>
