@@ -1,3 +1,7 @@
+.projects {
+    padding: 0 9rem;
+}
+
 .project__card_container {
     display: flex;
     justify-content: center;
@@ -5,6 +9,7 @@
     max-width: 35rem;
     margin: 0 auto;
     gap: 1rem;
+    margin-bottom: 2rem;
 
     img {
         border: 1px solid #5f5f5f;
@@ -16,4 +21,59 @@
 .project__buttons__container {
     display: flex;
     gap: 1rem;
+}
+
+@media (min-width: 320px) {}
+
+@media (min-width: 475px) {
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .projects {
+
+        .project__cards {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        .project__cards {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .projects {
+        .project__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (min-width: 1536px) {
+    .projects {
+        .project__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

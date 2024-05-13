@@ -1,25 +1,141 @@
-.about {
-    display: flex;
-    padding: 0 9rem;
+@import '../utilities.scss';
 
-    img {
-        width: 20rem;
-        height: 25rem;
-    }
-}
-
-.about__box {
-    max-width: 40rem;
-    margin: 0 auto;
+.frontend__color {
+    color: red;
 }
 
 .tech__stack {
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+
     img {
         width: 3rem;
         height: 3rem;
     }
 }
 
-.frontend__color {
-    color: red;
+@media (min-width: 320px) {
+    .about {
+        .tech__stack {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        img {}
+
+        .mypic {
+            display: block;
+            width: 19rem;
+            height: 25rem;
+        }
+    }
+}
+
+@media (min-width: 475px) {
+    .about {
+        .tech__stack {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .mypic {
+            display: block;
+            width: 20rem;
+            height: 25rem;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .about {
+        .tech__stack {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .mypic {
+            display: block;
+            width: 20rem;
+            height: 25rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .about {
+        display: block;
+        padding: 0 9rem;
+
+        img {}
+
+        .mypic {
+            display: block;
+            width: 20rem;
+            height: 25rem;
+        }
+
+        .tech__stack {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        .tech__stack {
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {}
+
+@media (min-width: 1536px) {
+    .about {
+        padding: 0 9rem;
+
+        img {
+            margin: 0 auto;
+            width: 20rem;
+            height: 25rem;
+        }
+
+        * {
+            //border: 1px solid #ccc;
+        }
+
+        .about__box {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+
+        .tech__stack {
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
 }
