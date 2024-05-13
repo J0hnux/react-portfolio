@@ -1,5 +1,4 @@
 import "./App.scss";
-import "./MediaQueries.scss";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
