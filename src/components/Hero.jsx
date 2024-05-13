@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="hero container section">
       <div className="hero__inner__container">
         <div className="left_hero">
-          <h3>My name is Clark.</h3>
+          <h3>Hello, there! My name is Clark.</h3>
           <h1>
             FRONT-END
             <br />
