@@ -3,6 +3,18 @@
 .contact {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        margin-top: 0;
+        max-width: 22rem;
+        text-align: center;
+    }
 }
 
 @media (min-width: 320px) {
