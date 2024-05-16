@@ -1,5 +1,13 @@
 @import '../utilities.scss';
 
+.about {
+    img {
+        border-bottom: 2px solid #464646;
+        border-right: 2px solid #464646;
+        border-radius: 16px;
+    }
+}
+
 .frontend__color {
     color: red;
 }
@@ -13,6 +21,23 @@
     img {
         width: 3rem;
         height: 3rem;
+    }
+}
+
+@media (min-width: 200px) {
+    .about {
+        .tech__stack {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .mypic {
+            display: block;
+            width: 18rem;
+            height: 24rem;
+        }
     }
 }
 
@@ -58,6 +83,7 @@
 
 @media (min-width: 640px) {
     .about {
+
         .tech__stack {
             ul {
                 display: grid;
@@ -65,14 +91,21 @@
             }
         }
 
-        img {
-            margin: 0 auto;
-        }
-
         .mypic {
             display: block;
             width: 20rem;
             height: 25rem;
+        }
+
+        .about__left {
+            //border: 1px solid #fff;
+            max-width: 35rem;
+            margin: 0 auto;
+        }
+
+        .about__box {
+            max-width: 35rem;
+            margin: 0 auto;
         }
     }
 }
@@ -82,10 +115,9 @@
         display: block;
         padding: 0 9rem;
 
-        img {}
-
         .mypic {
-            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
             width: 20rem;
             height: 25rem;
         }
@@ -110,14 +142,40 @@
     }
 }
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+    .about {
+        display: flex;
+        padding: 0 9rem;
+
+        .mypic {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 20rem;
+            height: 25rem;
+        }
+
+        .about__box {
+            max-width: 35rem;
+            margin: 0 auto;
+        }
+
+        .tech__stack {
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}
 
 @media (min-width: 1536px) {
     .about {
-        padding: 0 9rem;
+        display: flex;
+        padding: 0 17rem;
 
-        img {
-            margin: 0 auto;
+        .mypic {
+            margin-top: auto;
+            margin-bottom: auto;
             width: 20rem;
             height: 25rem;
         }
