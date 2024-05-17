@@ -1,7 +1,13 @@
 @import '../utilities.scss';
 
 .projects {
-    padding: 0 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: $clr-sectionheader;
+    }
 }
 
 .project__card_container {
@@ -10,6 +16,8 @@
     align-items: center;
     max-width: 35rem;
     margin: 0 auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     gap: 1rem;
     margin-bottom: 2rem;
 
@@ -47,13 +55,60 @@
     }
 }
 
-@media (min-width: 320px) {}
+@media (min-width: 320px) {
+    .projects {
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .project__card_container {
+        display: block;
+
+        img {
+            width: 10rem;
+        }
+
+        .project_card_content {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                max-width: 25rem;
+            }
+        }
+
+        .project_card_content>* {
+            margin-top: 1rem;
+        }
+    }
+}
 
 @media (min-width: 475px) {
     .projects {
 
         .project__cards {
             display: block;
+        }
+    }
+
+    .project__card_container {
+        display: flex;
+
+        img {
+            width: 13rem;
+        }
+
+        .project_card_content {
+            p {
+                max-width: 25rem;
+            }
+        }
+
+        .project_card_content>* {
+            margin-top: 0;
         }
     }
 }
@@ -63,6 +118,18 @@
 
         .project__cards {
             display: block;
+        }
+    }
+
+    .project__card_container {
+        img {
+            width: 10rem;
+        }
+
+        .project_card_content {
+            p {
+                max-width: 25rem;
+            }
         }
     }
 }
