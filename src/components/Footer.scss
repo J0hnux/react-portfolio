@@ -1,3 +1,21 @@
 @import '../utilities.scss';
 
-.footer {}
+.footer {
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 320px) {
+    .footer {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (min-width: 475px) {
+    .footer {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
