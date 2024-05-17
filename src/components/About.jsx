@@ -7,10 +7,12 @@ const About = () => {
         <h1>About</h1>
         <div className="about__box">
           <p>
-            Hello! I'm Clark, a self-taught{" "}
-            <span className="frontend__color">Frontend</span> web developer
-            based on Philippines. Ever since I was a kid it has been my dream to
-            create things. Be it web based apps, games or software apps.
+            Hello! I'm Clark, apart from being a self-taught{" "}
+            <span className="frontend__color">Frontend</span> web developer, I
+            am also a self-taught in game development. But my focus for now is
+            web development. I am based on Philippines. Ever since I was a kid
+            it has been my dream to create things. Be it web based apps, games
+            or software apps.
           </p>
           <p>
             I am keen to learn new things, especially regarding my tech stack
