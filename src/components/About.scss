@@ -6,6 +6,10 @@
         border-right: 2px solid #464646;
         border-radius: 16px;
     }
+
+    p {
+        margin: 0.75rem 0;
+    }
 }
 
 .frontend__color {
@@ -43,6 +47,17 @@
 
 @media (min-width: 320px) {
     .about {
+
+        .about__left {
+            h3 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .about__left>div {
+            margin: 2rem 0;
+        }
+
         .tech__stack {
             ul {
                 display: grid;
