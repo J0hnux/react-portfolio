@@ -8,7 +8,7 @@ const About = () => {
         <div className="about__box">
           <p>
             Hello! I'm Clark, apart from being a self-taught{" "}
-            <span className="frontend__color">Frontend</span> web developer, I
+            <span className="frontend__text">Front-end</span> web developer, I
             am also a self-taught in game development. But my focus for now is
             web development. I am based on Philippines. Ever since I was a kid
             it has been my dream to create things. Be it web based apps, games
@@ -27,7 +27,9 @@ const About = () => {
           </p>
         </div>
         <div className="tech__stack">
-          <h3>Technologies</h3>
+          <h3>
+            <b>Technologies</b>
+          </h3>
           <ul>
             <li>
               <img src="/Technologies/html.svg" alt="html" />
