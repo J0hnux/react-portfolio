@@ -12,8 +12,9 @@ const Hero = () => {
             WEB DEVELOPER.
           </h1>
           <p>
-            I am a self-taught Front-end web developer with a passion in web
-            development and UI/UX.
+            A self-taught Front-end web developer with a passion in web
+            development, currently learning fullstack development to get all my
+            ideas to life.
           </p>
         </div>
       </div>
