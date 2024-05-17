@@ -12,9 +12,9 @@ const Hero = () => {
             WEB DEVELOPER.
           </h1>
           <p>
-            A self-taught Front-end web developer with a passion in web
-            development, currently learning fullstack development to get all my
-            ideas to life.
+            A self-taught <span className="frontend__text">Front-end</span> web
+            developer with a passion in web development, currently learning
+            fullstack development to get all my ideas to life.
           </p>
         </div>
       </div>
