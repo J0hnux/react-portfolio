@@ -16,6 +16,23 @@
         max-width: 22rem;
         text-align: center;
     }
+
+    button {
+        margin-top: 1rem;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        background: $clr-slate400;
+        color: $clr-slate600;
+        border-radius: 12px;
+        padding: 1rem;
+
+        &:hover {
+            background: $clr-slate700;
+            color: $clr-slate800;
+            border-bottom: 2px solid $clr-slate400;
+            border-right: 2px solid $clr-slate400;
+        }
+    }
 }
 
 @media (min-width: 320px) {
