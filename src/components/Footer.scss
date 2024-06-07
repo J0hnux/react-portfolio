@@ -2,6 +2,12 @@
 
 .footer {
     padding-bottom: 1rem;
+
+    a {
+        &:hover {
+            scale: 1.10;
+        }
+    }
 }
 
 @media (min-width: 320px) {
