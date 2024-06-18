@@ -22,7 +22,6 @@
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
-    padding-top: 2rem;
     gap: 1rem;
     border-radius: 16px;
 
@@ -114,6 +113,10 @@
         border-top: 2px solid #777777;
         border-radius: 0px;
 
+        &:first-of-type {
+            border: none;
+        }
+
         img {
             width: 100%;
         }
@@ -121,6 +124,10 @@
         .project-image-container {
             width: 25rem;
             height: 20rem;
+
+            &:not(first-of-type) {
+                margin-top: 2rem;
+            }
         }
 
         .project_card_content {
@@ -139,9 +146,18 @@
     .project__card_container {
         margin-bottom: 2rem;
 
+        &:first-of-type {
+            border: none;
+        }
+
+
         .project-image-container {
             width: 30rem;
             height: 25rem;
+
+            &:not(first-of-type) {
+                margin-top: 2rem;
+            }
         }
 
         .project_card_content {
@@ -161,9 +177,17 @@
         margin-bottom: 2rem;
         border-radius: 16px;
 
+        &:first-of-type {
+            border: 2px solid #494949;
+        }
+
         .project-image-container {
             width: 30rem;
             height: 25rem;
+
+            &:not(first-of-type) {
+                margin-top: 1rem;
+            }
         }
 
         .project_card_content {
@@ -200,6 +224,7 @@
 @media (min-width: 1024px) {
     .project__card_container {
         margin-bottom: 2rem;
+        padding-top: 2rem;
         border-radius: 16px;
         max-width: 55rem;
 
@@ -233,6 +258,7 @@
 
     .project__card_container {
         margin-bottom: 5rem;
+        padding-top: 2rem;
         border-radius: 16px;
         max-width: 55rem;
 
@@ -261,8 +287,8 @@
     }
 
     .project__card_container {
-        padding: 0;
         margin-bottom: 5rem;
+        padding-top: 2rem;
         max-width: 55rem;
         border-radius: 16px;
 
