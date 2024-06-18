@@ -10,7 +10,7 @@ const projects = [
     ],
     name: "Clark Cars",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque officia, corporis hic saepe eveniet eum ad necessitatibus reprehenderit, optio consequatur excepturi odit dolor libero provident adipisci ullam! Nemo, delectus eligendi.",
+      "Clark Cars was first founded in a garage of an aspiring business man, who doesn't have the money to start his own car rental. But due to his dedication and discipline, his hardwork paid off. Clark Cars is all over the world with 50 branches worldwide. ",
     websiteLink: "https://www.google.com",
     githubLink: "https://www.github.com",
   },
