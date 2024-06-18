@@ -27,8 +27,8 @@
     border-radius: 16px;
 
     .project-image-container {
-        width: 25rem;
-        height: 25rem;
+        width: 20rem;
+        height: 20rem;
         padding: 1rem;
 
         .project-image {
@@ -42,6 +42,7 @@
     .project_card_content {
         .technology-stack {
             padding: 1rem;
+            margin: 1rem;
             margin-bottom: 1rem;
             border-top: 2px solid #000;
             border-bottom: 2px solid #000;
@@ -63,7 +64,7 @@
         }
 
         .project-details {
-            padding: 1rem;
+            padding: 0 2rem;
 
             h4,
             p {
@@ -71,10 +72,6 @@
             }
         }
     }
-
-
-
-
 }
 
 .project__buttons__container {
@@ -114,7 +111,7 @@
 @media (min-width: 320px) {
     .project__card_container {
         width: 100%;
-        border: none;
+        margin: 0 auto;
 
         img {
             width: 100%;
@@ -133,13 +130,6 @@
 }
 
 @media (min-width: 475px) {
-    .projects {
-
-        .project__cards {
-            // display: block;
-        }
-    }
-
     .project__card_container {
         .project_card_content {
             .project-details {
@@ -166,13 +156,6 @@
 }
 
 @media (min-width: 768px) {
-    .projects {
-
-        .project__cards {
-            // display: block;
-        }
-    }
-
     .project__card_container {
         .project_card_content {
             .project-details {
