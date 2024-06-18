@@ -112,6 +112,10 @@
     .project__card_container {
         width: 100%;
         margin: 0 auto;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+        border-top: 2px solid #777777;
+        border-radius: 0px;
 
         img {
             width: 100%;
@@ -131,6 +135,8 @@
 
 @media (min-width: 475px) {
     .project__card_container {
+        margin-bottom: 2rem;
+
         .project_card_content {
             .project-details {
                 p {
@@ -144,6 +150,9 @@
 @media (min-width: 640px) {
     .project__card_container {
         border: 2px solid #494949;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        border-radius: 16px;
 
         .project_card_content {
             .project-details {
@@ -157,6 +166,9 @@
 
 @media (min-width: 768px) {
     .project__card_container {
+        margin-bottom: 2rem;
+        border-radius: 16px;
+
         .project_card_content {
             .project-details {
                 p {
@@ -169,6 +181,9 @@
 
 @media (min-width: 1024px) {
     .project__card_container {
+        margin-bottom: 2rem;
+        border-radius: 16px;
+
         .project_card_content {
             .project-details {
                 p {
@@ -189,6 +204,10 @@
     }
 
     .project__card_container {
+        padding: 0;
+        margin-bottom: 5rem;
+        border-radius: 16px;
+
         .project_card_content {
             .project-details {
                 p {
@@ -209,9 +228,14 @@
     }
 
     .project__card_container {
+        padding: 0;
+        padding-top: 2rem;
+        margin-bottom: 5rem;
+        border-radius: 16px;
 
         .project_card_content {
             .project-details {
+
                 p {
                     max-width: 25rem;
                 }
