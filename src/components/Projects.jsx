@@ -1,4 +1,5 @@
 import ProjectCard from "./Projects/ProjectCard";
+import projects from "../data/projects";
 import "./Projects.scss";
 
 const Projects = () => {
@@ -6,9 +7,18 @@ const Projects = () => {
     <section className="projects container section" id="projects">
       <h1>Projects</h1>
       <div className="project__cards">
-        <ProjectCard name="Real Estate - Work In Development" />
-        <ProjectCard name="Car Rental - Work In Development" />
-        <ProjectCard name="Blog Site - Work In Development" />
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            imgURL={project.imgURL}
+            imgAlt={project.imgAlt}
+            techStacks={project.techStacks}
+            name={project.name}
+            description={project.description}
+            websiteLink={project.websiteLink}
+            githubLink={project.githubLink}
+          />
+        ))}
       </div>
     </section>
   );
