@@ -1,6 +1,9 @@
+import "./MobileNav.scss";
+
 const MobileNav = () => {
   return (
     <div className="mobile-nav">
+      <button>X</button>
       <nav>
         <ul>
           <li>
