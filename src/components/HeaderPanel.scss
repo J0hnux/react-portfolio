@@ -37,48 +37,64 @@
     }
 }
 
-.mobile-nav {
-    display: none; // flex
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: #292929; // Change later
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+@media (min-width: 200px) {
+    .header {
+        .left-nav {
+            display: none;
+        }
 
-    nav {
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .right__header_panel {
+            button {
+                color: #fff;
+            }
+
+            .btn__resume {
+                border-radius: 6px;
+                padding: 0.75rem;
+                border: 1px solid #fff;
+            }
         }
     }
 }
 
-@media (min-width: 320px) {}
+@media (min-width: 320px) {
+    .header {}
+}
 
 @media (min-width: 475px) {}
 
 @media (min-width: 640px) {
     .header {
+        .left-nav {
+            display: none;
+        }
+
         .mobile__nav_btn {
             margin-left: 2rem;
+        }
+
+        .right__header_panel {
+            button {
+                color: #fff;
+            }
+
+            .btn__resume {
+                border-radius: 6px;
+                padding: 0.75rem;
+                border: 1px solid #fff;
+            }
         }
     }
 }
 
 @media (min-width: 768px) {
     .header {
-        button.mobile__nav_btn {
+        .mobile__nav_btn {
             display: none;
         }
 
-        nav {
+        .left-nav {
+            display: flex;
             margin-left: 1rem;
         }
 
@@ -87,12 +103,6 @@
 
             button {
                 color: #fff;
-            }
-
-            .btn__toggle_darklight {
-                margin-right: 0.5rem;
-                padding: 0.5rem;
-                border-radius: 100%;
             }
 
             .btn__resume {
@@ -122,14 +132,10 @@
 
 
 // Removes nav
-@media (max-width: 767px) {
-    .header {
-        nav {
-            display: none;
-        }
-
-        .right__header_panel {
-            display: none;
-        }
-    }
-}
+// @media (max-width: 767px) {
+//     .header {
+//         nav {
+//             display: none;
+//         }
+//     }
+// }
