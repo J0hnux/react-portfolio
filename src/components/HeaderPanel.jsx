@@ -4,7 +4,7 @@ import "./HeaderPanel.scss";
 const HeaderPanel = () => {
   return (
     <header className="header container">
-      <nav>
+      <nav className="left-nav">
         <ul>
           <li>
             <a href="#about">About</a>
