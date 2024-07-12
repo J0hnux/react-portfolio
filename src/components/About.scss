@@ -34,8 +34,9 @@
     .about {
         .tech__stack {
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
             }
         }
 
@@ -66,18 +67,9 @@
 
         .tech__stack {
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-
-                li {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    &:last-child {
-                        grid-column: 2;
-                    }
-                }
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
             }
         }
 
@@ -95,8 +87,8 @@
     .about {
         .tech__stack {
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                justify-content: center;
             }
         }
 
@@ -117,8 +109,8 @@
 
         .tech__stack {
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                justify-content: center;
             }
         }
 
@@ -155,8 +147,8 @@
 
         .tech__stack {
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                justify-content: center;
             }
         }
     }
