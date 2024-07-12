@@ -68,6 +68,16 @@
             ul {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:last-child {
+                        grid-column: 2;
+                    }
+                }
             }
         }
 
