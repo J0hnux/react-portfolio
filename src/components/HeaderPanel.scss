@@ -39,7 +39,20 @@
         background: none;
         border: none;
     }
+
+    .right__header_panel {
+        .btn__resume {
+
+
+            &:hover {
+                border: 1px solid $clr-rose;
+                color: $clr-rose;
+            }
+        }
+    }
 }
+
+
 
 @media (min-width: 200px) {
     .header {
