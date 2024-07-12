@@ -9,6 +9,10 @@
     padding-bottom: 2rem;
     z-index: 99999;
 
+    .mobile__nav_btn {
+        z-index: 999991;
+    }
+
     nav {
         ul {
             display: flex;
