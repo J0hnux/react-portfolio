@@ -8,7 +8,9 @@ const Contact = () => {
         Be it for your startup company or just a small business, I'm at your
         service to help create your business starting with a website of yours.
       </p>
-      <button>Contact Me</button>
+      <a href="mailto:jc24.doliente@gmail.com" target="_blank">
+        Contact Me
+      </a>
     </section>
   );
 };
