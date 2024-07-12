@@ -5,7 +5,7 @@ import "./Projects.scss";
 const Projects = () => {
   return (
     <section className="projects container section" id="projects">
-      <h1>Projects</h1>
+      <h1>{projects.length > 1 ? "Projects" : "Project"}</h1>
       <div className="project__cards">
         {projects.map((project, index) => (
           <ProjectCard
