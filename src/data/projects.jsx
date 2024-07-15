@@ -10,7 +10,7 @@ const projects = [
     ],
     name: "Clark Cars",
     description:
-      "Clark Cars was first founded in a garage of an aspiring business man, who doesn't have the money to start his own car rental. But due to his dedication and discipline, his hardwork paid off. Clark Cars is all over the world with 50 branches worldwide. ",
+      "Clark Cars is a car rental website developed using NextJS and ReactJS. To style the website a combination of Tailwind and SCSS were used. Clark Cars is almost a complete website, with about and contact page that utilises the power of captcha to distinguish bots from humans. However, the captcha is very simple which asks a random mathematical question that even a kindergarten student can answer.",
     websiteLink: "https://www.google.com",
     githubLink: "https://www.github.com",
   },
