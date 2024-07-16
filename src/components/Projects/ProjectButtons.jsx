@@ -7,7 +7,7 @@ const ProjectButtons = (props) => {
       </a>
       <a href={props.githubLink} target="_blank">
         <img src="/ButtonIcons/github.svg" alt="visit source on github" />
-        View on Github
+        Request Github Access
       </a>
     </div>
   );
