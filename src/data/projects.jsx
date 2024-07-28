@@ -10,9 +10,9 @@ const projects = [
     ],
     name: "Clark Cars",
     description:
-      "Clark Cars is a car rental website developed using NextJS and ReactJS. To style the website a combination of Tailwind and SCSS were used. Clark Cars is like almost any car rental websites out there, with a contact page that utilises the power of captcha to distinguish bots from humans. What I like most about the contact page is the captcha where I created all the mathematical questions with Paint with questions that even a kindergarten student can answer. The only thing that Clark Cars doesn't have yet is a fleet of cars that can actually be rented.",
+      "Clark Cars is a car rental website developed using NextJS and ReactJS. To style the website a combination of Tailwind and SCSS were used. The website is not yet fully developed, what it lacks is the backend and a few things as well. Also, there are other design aspects that it lacks, like animation, loading skeleton and so much more. I am thinking of changing the Category section into a centered stacked carousel which only appears on low width screens to make it more user friendly and for aesthetic as well.",
     websiteLink: "https://clark-cars-rental.vercel.app/",
-    githubLink: "mailto:jc24.doliente@gmail.com",
+    githubLink: "https://github.com/J0hnux/my-car-rental",
   },
 ];
 
