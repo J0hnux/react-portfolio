@@ -19,17 +19,33 @@
             gap: 1.25rem;
             list-style: none;
 
-
             li {
+                position: relative;
                 padding: 0.25rem 0.5rem;
+                width: max-content;
 
                 a {
                     color: #fff;
                     text-decoration: none;
 
-                    &:hover {
-                        color: $clr-rose;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 4px;
+                        width: 0;
+                        background-color: #fff;
+                        bottom: 0;
+                        left: 0;
+                        transition: 100ms;
                     }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    // &:hover {
+                    //     color: $clr-rose;
+                    // }
                 }
             }
         }
