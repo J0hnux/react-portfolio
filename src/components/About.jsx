@@ -55,7 +55,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <img className="mypic" src="/my-pic2.jpeg" alt="" />
+      <img className="mypic" src="/my-pic.jpg" alt="" />
     </section>
   );
 };
