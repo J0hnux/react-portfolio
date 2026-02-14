@@ -112,6 +112,7 @@ const Hero = () => {
         .hero-name-accent {
           color: var(--accent);
           display: block;
+          font-size: 8rem;
         }
         .hero-bottom {
           display: flex;
@@ -136,11 +137,19 @@ const Hero = () => {
           text-transform: uppercase;
           flex-shrink: 0;
         }
+        .hero-typewriter-inner::after {
+          content: "."; /* fixes shake */
+          visibility: hidden;
+          white-space: nowrap;
+          font-family: var(--font-display);
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
         .hero-typewriter-inner {
           display: inline-flex;
           align-items: center;
-          width: 270px;
-          overflow: hidden;
+          min-width: 18ch; /* stable character width */
+          position: relative;
         }
         .hero-typewriter {
           font-family: var(--font-display);
