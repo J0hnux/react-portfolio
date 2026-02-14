@@ -12,22 +12,19 @@ const Projects = () => {
         .projects-inner {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 7rem 2rem;
+          padding: 5rem 1.25rem;
         }
         .projects-header {
           display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          margin-bottom: 4rem;
-          gap: 2rem;
-          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 1.25rem;
+          margin-bottom: 3rem;
         }
-        .projects-header-left {}
         .projects-label {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          margin-bottom: 1rem;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
         }
         .projects-label-num {
           font-family: var(--font-display);
@@ -37,48 +34,73 @@ const Projects = () => {
           letter-spacing: 0.15em;
         }
         .projects-label-line {
-          width: 30px;
+          width: 24px;
           height: 1px;
           background: var(--border);
         }
         .projects-label-text {
-          font-size: 0.75rem;
+          font-size: 0.72rem;
           color: var(--text-muted);
           letter-spacing: 0.2em;
           text-transform: uppercase;
         }
         .projects-heading {
           font-family: var(--font-display);
-          font-size: clamp(2.5rem, 5vw, 4rem);
+          font-size: clamp(2.2rem, 10vw, 4rem);
           font-weight: 800;
           line-height: 1;
           letter-spacing: -0.02em;
           text-transform: uppercase;
           color: var(--text);
         }
+        @media (max-width: 640px) {
+          .projects-heading {
+            font-size: clamp(2.10rem, 6.5vw, 3rem);
+          }
+        }
         .projects-heading em {
           color: var(--accent);
           font-style: normal;
         }
         .projects-subtext {
-          font-size: 0.9rem;
+          font-size: 0.88rem;
           color: var(--text-muted);
-          max-width: 260px;
           line-height: 1.7;
+          max-width: 100%;
         }
+
+        /* Mobile: single column cards */
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-          gap: 1.5rem;
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
         }
-        @media (max-width: 480px) {
-          .projects-grid { grid-template-columns: 1fr; }
+
+        /* Tablet+: multi-column */
+        @media (min-width: 640px) {
+          .projects-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+          }
+        }
+
+        @media (min-width: 900px) {
+          .projects-inner { padding: 7rem 2rem; }
+          .projects-header {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 4rem;
+            gap: 2rem;
+          }
+          .projects-subtext { max-width: 260px; }
         }
       `}</style>
+
       <section className="projects-section section" id="projects">
         <div className="projects-inner">
           <div className="projects-header reveal">
-            <div className="projects-header-left">
+            <div>
               <div className="projects-label">
                 <span className="projects-label-num">02</span>
                 <div className="projects-label-line" />
@@ -95,6 +117,7 @@ const Projects = () => {
               something new.
             </p>
           </div>
+
           <div className="projects-grid">
             {projects.map((project, index) => (
               <div

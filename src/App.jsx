@@ -34,6 +34,8 @@ const globalStyles = `
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    /* Prevent layout shift from scrollbar appearance */
+    overflow-y: scroll;
   }
 
   body::before {
@@ -52,27 +54,27 @@ const globalStyles = `
   ul { list-style: none; }
   img { display: block; max-width: 100%; }
 
+  /* Improve tap target sizes globally */
+  button, a {
+    touch-action: manipulation;
+  }
+
   .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.25rem;
   }
 
   .section {
-    padding: 7rem 0;
-  }
-
-  @media (max-width: 768px) {
-    .section { padding: 5rem 0; }
-    .container { padding: 0 1.25rem; }
+    padding: 5rem 0;
   }
 
   /* Scroll animations */
   .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .reveal.visible {
     opacity: 1;
@@ -82,16 +84,20 @@ const globalStyles = `
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* Desktop: restore generous section padding */
+  @media (min-width: 769px) {
+    .container { padding: 0 2rem; }
+    .section { padding: 7rem 0; }
+  }
 `;
 
 function App() {
   useEffect(() => {
-    // Inject global styles
     const style = document.createElement("style");
     style.innerHTML = globalStyles;
     document.head.appendChild(style);
 
-    // Scroll reveal
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -100,7 +106,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.08 },
     );
 
     const revealEls = document.querySelectorAll(".reveal");

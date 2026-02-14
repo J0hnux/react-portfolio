@@ -4,7 +4,6 @@ const Hero = () => {
   const tagRef = useRef(null);
 
   useEffect(() => {
-    // Typewriter for the tagline
     const tags = [
       "Fullstack Developer.",
       "Creative Builder.",
@@ -46,12 +45,12 @@ const Hero = () => {
     <>
       <style>{`
         .hero-section {
-          min-height: 100vh;
+          min-height: 100svh; /* svh fixes mobile browser chrome */
           display: flex;
           align-items: center;
           position: relative;
           overflow: hidden;
-          padding-top: 70px;
+          padding-top: 60px; /* matches mobile header height */
         }
         .hero-bg-number {
           position: absolute;
@@ -59,7 +58,7 @@ const Hero = () => {
           top: 50%;
           transform: translateY(-50%);
           font-family: var(--font-display);
-          font-size: clamp(200px, 30vw, 420px);
+          font-size: clamp(120px, 35vw, 420px);
           font-weight: 800;
           color: transparent;
           -webkit-text-stroke: 1px rgba(242, 237, 228, 0.04);
@@ -71,7 +70,7 @@ const Hero = () => {
         .hero-inner {
           position: relative;
           z-index: 1;
-          padding: 5rem 2rem;
+          padding: 3rem 1.25rem 5rem;
           max-width: 1200px;
           margin: 0 auto;
           width: 100%;
@@ -79,55 +78,39 @@ const Hero = () => {
         .hero-eyebrow {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          margin-bottom: 2rem;
+          gap: 0.75rem;
+          margin-bottom: 1.5rem;
           opacity: 0;
           animation: fadeUp 0.7s ease 0.2s forwards;
+          flex-wrap: wrap;
         }
         .hero-eyebrow-line {
-          width: 40px;
+          width: 30px;
           height: 1px;
           background: var(--accent);
+          flex-shrink: 0;
         }
         .hero-eyebrow-text {
           font-family: var(--font-body);
-          font-size: 0.8rem;
+          font-size: 0.72rem;
           font-weight: 500;
-          letter-spacing: 0.2em;
+          letter-spacing: 0.18em;
           text-transform: uppercase;
           color: var(--accent);
         }
         .hero-name {
           font-family: var(--font-display);
-          font-size: clamp(3.5rem, 10vw, 9rem);
-          font-weight: 800;
-          line-height: 0.9;
-          letter-spacing: -0.02em;
-          text-transform: uppercase;
-          color: var(--text);
-          margin-bottom: 2.5rem;
-          opacity: 0;
-          animation: fadeUp 0.7s ease 0.4s forwards;
-        }
-        .hero-name-accent {
-          color: var(--accent);
-          display: block;
-          font-size: 8rem;
         }
         .hero-bottom {
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          gap: 2rem;
-          flex-wrap: wrap;
           opacity: 0;
           animation: fadeUp 0.7s ease 0.6s forwards;
         }
         .hero-typewriter-wrap {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          white-space: nowrap;
+          gap: 0.6rem;
+          flex-wrap: wrap;
+          margin-bottom: 1.25rem;
         }
         .hero-typewriter-label {
           font-family: var(--font-body);
@@ -137,23 +120,23 @@ const Hero = () => {
           text-transform: uppercase;
           flex-shrink: 0;
         }
-        .hero-typewriter-inner::after {
-          content: "."; /* fixes shake */
-          visibility: hidden;
-          white-space: nowrap;
-          font-family: var(--font-display);
-          font-size: 1.3rem;
-          font-weight: 700;
-        }
         .hero-typewriter-inner {
           display: inline-flex;
           align-items: center;
-          min-width: 18ch; /* stable character width */
+          min-width: 18ch;
           position: relative;
+        }
+        .hero-typewriter-inner::after {
+          content: ".";
+          visibility: hidden;
+          white-space: nowrap;
+          font-family: var(--font-display);
+          font-size: clamp(1rem, 4vw, 1.3rem);
+          font-weight: 700;
         }
         .hero-typewriter {
           font-family: var(--font-display);
-          font-size: 1.3rem;
+          font-size: clamp(1rem, 4vw, 1.3rem);
           font-weight: 700;
           color: var(--text);
           white-space: nowrap;
@@ -169,14 +152,47 @@ const Hero = () => {
           animation: blink 0.8s step-end infinite;
         }
         .hero-desc {
-          max-width: 380px;
-          font-size: 0.95rem;
+          font-size: 0.92rem;
           color: var(--text-muted);
-          line-height: 1.75;
+          line-height: 1.8;
+          max-width: 420px;
+          margin-bottom: 2rem;
+        }
+        .hero-cta-row {
+          display: flex;
+          gap: 0.75rem;
+          flex-wrap: wrap;
+        }
+        .hero-cta {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          font-family: var(--font-body);
+          font-size: 0.85rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--text);
+          border: 1px solid var(--border);
+          /* Mobile-friendly tap target: min 48px height */
+          padding: 0.9rem 1.5rem;
+          min-height: 48px;
+          border-radius: 3px;
+          transition: all 0.25s ease;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          flex: 1;
+          min-width: 140px;
+        }
+        .hero-cta:hover, .hero-cta:active {
+          background: var(--accent-dim);
+          border-color: var(--accent);
+          color: var(--accent);
         }
         .hero-scroll-hint {
           position: absolute;
-          bottom: 2.5rem;
+          bottom: 1.5rem;
           left: 50%;
           transform: translateX(-50%);
           display: flex;
@@ -187,38 +203,18 @@ const Hero = () => {
           animation: fadeUp 0.7s ease 1s forwards;
         }
         .hero-scroll-hint span {
-          font-size: 0.7rem;
+          font-size: 0.65rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: var(--text-muted);
         }
         .hero-scroll-line {
           width: 1px;
-          height: 50px;
+          height: 40px;
           background: linear-gradient(to bottom, var(--text-muted), transparent);
           animation: scrollPulse 2s ease-in-out infinite;
         }
-        .hero-cta {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.6rem;
-          font-family: var(--font-body);
-          font-size: 0.85rem;
-          font-weight: 600;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          color: var(--text);
-          border: 1px solid var(--border);
-          padding: 0.85rem 1.75rem;
-          border-radius: 3px;
-          transition: all 0.25s ease;
-          margin-top: 1rem;
-        }
-        .hero-cta:hover {
-          background: var(--accent-dim);
-          border-color: var(--accent);
-          color: var(--accent);
-        }
+
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
@@ -226,10 +222,22 @@ const Hero = () => {
         @keyframes blink {
           50% { opacity: 0; }
         }
-        
-        @media (max-width: 768px) {
-          .hero-bottom { flex-direction: column; align-items: flex-start; }
-          .hero-desc { max-width: 100%; }
+        @keyframes scrollPulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 1; }
+        }
+
+        /* Desktop refinements */
+        @media (min-width: 769px) {
+          .hero-section { padding-top: 70px; }
+          .hero-inner { padding: 5rem 2rem; }
+          .hero-eyebrow { margin-bottom: 2rem; }
+          .hero-name { margin-bottom: 2.5rem; }
+          .hero-cta {
+            flex: none;
+            min-width: auto;
+          }
+          .hero-scroll-hint { bottom: 2.5rem; }
         }
       `}</style>
 
@@ -244,39 +252,34 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="hero-name">
+          <h1 className="hero-name text-[clamp(3rem,13vw,9rem)] font-extrabold leading-[0.9] tracking-[-0.02em] uppercase text-[var(--text)] mb-8 opacity-0 animate-[fadeUp_0.7s_ease_0.4s_forwards]">
             Full-Stack
-            <span className="hero-name-accent">Developer.</span>
+            <span className="text-[var(--accent)] block md:text-[clamp(3rem,8vw,5rem)] text-[clamp(1rem,8vw,5rem)]">
+              Developer.
+            </span>
           </h1>
 
           <div className="hero-bottom">
-            <div>
-              <div className="hero-typewriter-wrap">
-                <span className="hero-typewriter-label">I am a </span>
-                <span className="hero-typewriter-inner">
-                  <span className="hero-typewriter" ref={tagRef}></span>
-                  <span className="hero-typewriter-cursor" />
-                </span>
-              </div>
-              <p className="hero-desc" style={{ marginTop: "1.25rem" }}>
-                Hi, I'm Clark — a self-taught fullstack web developer passionate
-                about crafting beautiful, performant web experiences.
-              </p>
-              <div
-                style={{
-                  marginTop: "2rem",
-                  display: "flex",
-                  gap: "1rem",
-                  flexWrap: "wrap",
-                }}
-              >
-                <a href="#projects" className="hero-cta">
-                  View Work <span>→</span>
-                </a>
-                <a href="#contact" className="hero-cta">
-                  Get In Touch
-                </a>
-              </div>
+            <div className="hero-typewriter-wrap">
+              <span className="hero-typewriter-label">I am a </span>
+              <span className="hero-typewriter-inner">
+                <span className="hero-typewriter" ref={tagRef}></span>
+                <span className="hero-typewriter-cursor" />
+              </span>
+            </div>
+
+            <p className="hero-desc">
+              Hi, I'm Clark — a self-taught fullstack web developer passionate
+              about crafting beautiful, performant web experiences.
+            </p>
+
+            <div className="hero-cta-row">
+              <a href="#projects" className="hero-cta">
+                View Work <span>→</span>
+              </a>
+              <a href="#contact" className="hero-cta">
+                Get In Touch
+              </a>
             </div>
           </div>
         </div>

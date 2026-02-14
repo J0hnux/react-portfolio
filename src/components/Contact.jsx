@@ -21,7 +21,7 @@ const Contact = () => {
           bottom: -0.15em;
           right: -0.02em;
           font-family: var(--font-display);
-          font-size: clamp(100px, 18vw, 260px);
+          font-size: clamp(80px, 22vw, 260px);
           font-weight: 800;
           color: transparent;
           -webkit-text-stroke: 1px rgba(242, 237, 228, 0.04);
@@ -31,22 +31,23 @@ const Contact = () => {
           letter-spacing: -0.05em;
           text-transform: uppercase;
         }
+
+        /* Mobile-first: single column */
         .contact-inner {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 7rem 2rem;
+          padding: 5rem 1.25rem;
           position: relative;
           z-index: 1;
           display: grid;
-          grid-template-columns: 1fr auto;
-          align-items: end;
-          gap: 4rem;
+          grid-template-columns: 1fr;
+          gap: 3rem;
         }
         .contact-label {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          margin-bottom: 1.5rem;
+          gap: 0.75rem;
+          margin-bottom: 1.25rem;
         }
         .contact-label-num {
           font-family: var(--font-display);
@@ -56,41 +57,46 @@ const Contact = () => {
           letter-spacing: 0.15em;
         }
         .contact-label-line {
-          width: 30px;
+          width: 24px;
           height: 1px;
           background: var(--border);
         }
         .contact-label-text {
-          font-size: 0.75rem;
+          font-size: 0.72rem;
           color: var(--text-muted);
           letter-spacing: 0.2em;
           text-transform: uppercase;
         }
         .contact-heading {
           font-family: var(--font-display);
-          font-size: clamp(2.5rem, 6vw, 5rem);
+          font-size: clamp(2.2rem, 9vw, 5rem);
           font-weight: 800;
           line-height: 0.95;
           letter-spacing: -0.03em;
           text-transform: uppercase;
           color: var(--text);
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
+        }
+        @media (max-width: 640px) {
+          .contact-heading {
+            font-size: clamp(1rem, 9vw, 5rem);
+          }
         }
         .contact-heading em {
           color: var(--accent);
           font-style: normal;
         }
         .contact-desc {
-          font-size: 0.95rem;
+          font-size: 0.92rem;
           color: var(--text-muted);
           line-height: 1.8;
-          max-width: 480px;
-          margin-bottom: 2.5rem;
+          margin-bottom: 2rem;
         }
         .contact-cta {
           display: inline-flex;
           align-items: center;
-          gap: 0.75rem;
+          justify-content: center;
+          gap: 0.6rem;
           font-family: var(--font-body);
           font-size: 0.9rem;
           font-weight: 700;
@@ -98,12 +104,16 @@ const Contact = () => {
           text-transform: uppercase;
           color: var(--bg);
           background: var(--accent);
+          /* full-width on mobile for easy tapping */
+          width: 100%;
           padding: 1rem 2rem;
+          min-height: 52px;
           border-radius: 3px;
           text-decoration: none;
           transition: all 0.25s ease;
+          -webkit-tap-highlight-color: transparent;
         }
-        .contact-cta:hover {
+        .contact-cta:hover, .contact-cta:active {
           opacity: 0.88;
           transform: translateY(-2px);
           box-shadow: 0 12px 40px rgba(200, 244, 97, 0.25);
@@ -113,11 +123,15 @@ const Contact = () => {
           transition: transform 0.25s ease;
         }
         .contact-cta:hover .contact-cta-arrow { transform: translateX(4px); }
+
+        /* Info items: horizontal row on mobile */
         .contact-aside {
           display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-          min-width: 180px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 1.5rem 2.5rem;
+          padding-top: 0.5rem;
+          border-top: 1px solid var(--border);
         }
         .contact-info-item {
           display: flex;
@@ -125,22 +139,60 @@ const Contact = () => {
           gap: 0.3rem;
         }
         .contact-info-label {
-          font-size: 0.65rem;
+          font-size: 0.62rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: var(--text-muted);
         }
         .contact-info-value {
-          font-size: 0.9rem;
+          font-size: 0.88rem;
           color: var(--text);
           font-weight: 500;
         }
-        @media (max-width: 768px) {
+        .contact-status {
+          color: var(--accent);
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.88rem;
+          font-weight: 500;
+        }
+        .status-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--accent);
+          display: inline-block;
+          box-shadow: 0 0 8px var(--accent);
+          animation: pulse 2s ease-in-out infinite;
+          flex-shrink: 0;
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+
+        /* Desktop: side-by-side layout, CTA not full-width */
+        @media (min-width: 769px) {
           .contact-inner {
-            grid-template-columns: 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr auto;
+            align-items: end;
+            gap: 4rem;
+            padding: 7rem 2rem;
           }
-          .contact-aside { flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+          .contact-cta {
+            width: auto;
+            display: inline-flex;
+          }
+          .contact-aside {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            border-top: none;
+            padding-top: 0;
+            min-width: 180px;
+          }
         }
       `}</style>
 
@@ -163,11 +215,7 @@ const Contact = () => {
               I'm ready to help bring your ideas to life, starting with a great
               website.
             </p>
-            <a
-              href="mailto:jc24.doliente@gmail.com"
-              target="_blank"
-              className="contact-cta"
-            >
+            <a href="mailto:jc24.doliente@gmail.com" className="contact-cta">
               Say Hello
               <span className="contact-cta-arrow">→</span>
             </a>
@@ -186,37 +234,13 @@ const Contact = () => {
             </div>
             <div className="contact-info-item">
               <span className="contact-info-label">Status</span>
-              <span
-                className="contact-info-value"
-                style={{
-                  color: "var(--accent)",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.4rem",
-                }}
-              >
-                <span
-                  style={{
-                    width: "6px",
-                    height: "6px",
-                    borderRadius: "50%",
-                    background: "var(--accent)",
-                    display: "inline-block",
-                    boxShadow: "0 0 8px var(--accent)",
-                    animation: "pulse 2s ease-in-out infinite",
-                  }}
-                />
+              <span className="contact-status">
+                <span className="status-dot" />
                 Available
               </span>
             </div>
           </div>
         </div>
-        <style>{`
-          @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-          }
-        `}</style>
       </section>
     </>
   );

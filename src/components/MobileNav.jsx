@@ -27,7 +27,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         }
         .mobile-nav-link {
           font-family: var(--font-display);
-          font-size: 3rem;
+          font-size: 3rem; /* default for large screens */
           font-weight: 800;
           text-transform: uppercase;
           letter-spacing: 0.05em;
@@ -54,9 +54,20 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           text-decoration: none;
           margin-top: 1rem;
         }
+
+        /* Media query for smaller screens */
+        @media (max-width: 640px) {
+          .mobile-nav-link {
+            font-size: 1.25rem; /* smaller font on mobile */
+          }
+          .mobile-nav-overlay {
+            gap: 2rem; /* reduce spacing */
+          }
+        }
+
       `}</style>
       <nav className={`mobile-nav-overlay ${isOpen ? "is-open" : ""}`}>
-        {links.map((link, i) => (
+        {links.map((link) => (
           <a
             key={link}
             href={`#${link.toLowerCase()}`}

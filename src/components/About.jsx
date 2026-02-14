@@ -1,3 +1,5 @@
+import { Image } from "react-bootstrap";
+
 const About = () => {
   const techs = [
     { name: "HTML5", icon: "/Technologies/html.svg" },
@@ -61,7 +63,7 @@ const About = () => {
         }
         .about-heading {
           font-family: var(--font-display);
-          font-size: clamp(2.5rem, 5vw, 4rem);
+          font-size: clamp(2rem, 5vw, 3.6rem);
           font-weight: 800;
           line-height: 1;
           letter-spacing: -0.02em;
@@ -95,13 +97,8 @@ const About = () => {
           margin-bottom: 3rem;
         }
         .about-photo-frame {
-          width: 100%;
-          aspect-ratio: 4/5;
           background: var(--bg-3);
           border: 1px solid var(--border);
-          border-radius: 4px;
-          overflow: hidden;
-          position: relative;
         }
         .about-photo {
           width: 100%;
@@ -208,10 +205,10 @@ const About = () => {
             </h2>
             <div className="about-text">
               <p>
-                Hello! I'm <strong>Clark</strong>, a self-taught front-end
-                developer based in the Philippines. Beyond web dev, I'm also
-                learning game development — but my focus right now is crafting
-                excellent web experiences.
+                Hello! I'm <strong>Clark</strong>, a self-taught fullstack web
+                developer developer based in the Philippines. Beyond web dev,
+                I'm also learning game development — but my focus right now is
+                crafting excellent web experiences.
               </p>
               <p>
                 I stay sharp by keeping up with updates to my tech stack. When
@@ -219,18 +216,29 @@ const About = () => {
                 quickly and apply it in real projects.
               </p>
               <p>
-                My most recent project was a{" "}
-                <strong>fullstack blog site</strong> built with Next.js. I'm
-                actively growing my backend skills to bridge the gap and become
-                a true fullstack developer.
+                My most recent project was a &nbsp;
+                <strong>
+                  full-stack automotive concierge and asset management platform
+                  &nbsp;
+                </strong>
+                built with Next.js, Tailwind, PostgreSQL, PayMongo. It includes
+                authentication, role-based access control, subscription
+                workflows, and a relational database architecture.
               </p>
             </div>
           </div>
 
           <div className="about-right reveal reveal-delay-2">
             <div className="about-photo-container">
-              <div className="about-photo-frame">
-                <img className="about-photo" src="/my-pic.jpg" alt="Clark" />
+              <div className="about-photo-frame w-full bg-[var(--bg-3)] border border-[var(--border)] rounded overflow-hidden">
+                <Image
+                  src="/my-pic.jpg"
+                  alt="mypic"
+                  unoptimized
+                  quality={100}
+                  width={900}
+                  className="about-photo w-full max-h-[65vh] object-contain rounded-xl select-none transition-colors duration-200"
+                />
               </div>
               <div className="about-photo-accent" />
             </div>
