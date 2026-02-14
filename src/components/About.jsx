@@ -1,5 +1,3 @@
-import { Image } from "react-bootstrap";
-
 const About = () => {
   const techs = [
     { name: "HTML5", icon: "/Technologies/html.svg" },
@@ -231,12 +229,9 @@ const About = () => {
           <div className="about-right reveal reveal-delay-2">
             <div className="about-photo-container">
               <div className="about-photo-frame w-full bg-[var(--bg-3)] border border-[var(--border)] rounded overflow-hidden">
-                <Image
+                <img
                   src="/my-pic.jpg"
                   alt="mypic"
-                  unoptimized
-                  quality={100}
-                  width={900}
                   className="about-photo w-full max-h-[65vh] object-contain rounded-xl select-none transition-colors duration-200"
                 />
               </div>
