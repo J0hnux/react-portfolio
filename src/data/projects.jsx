@@ -6,11 +6,10 @@ const projects = [
       { imgURL: "/Technologies/react.svg", imgAlt: "reactjs" },
       { imgURL: "/Technologies/nextjs.svg", imgAlt: "nextjs" },
       { imgURL: "/Technologies/tailwind.svg", imgAlt: "tailwind" },
-      { imgURL: "/Technologies/sass.svg", imgAlt: "sass" },
     ],
-    name: "Clark Cars",
+    name: "Elite Rentals",
     description:
-      "Clark Cars is a car rental website developed using NextJS and ReactJS. To style the website a combination of Tailwind and SCSS were used. The website is not yet fully developed, what it lacks is the backend and a few things as well. Also, there are other design aspects that it lacks, like animation, loading skeleton and so much more. I am thinking of changing the Category section into a centered stacked carousel which only appears on low width screens to make it more user friendly and for aesthetic as well.",
+      "Elite Rentals is a car rental web application built using Next.js and styled primarily with TailwindCSS. The project currently focuses on the front-end interface and layout, while the backend functionality and some additional features are still under development. At its current stage, the website provides the core user interface for browsing available vehicles and interacting with the platform, but several improvements are planned. These include implementing backend services, adding animations, integrating loading skeletons for better user experience during data fetching, and refining various UI elements. One planned enhancement is redesigning the Category section into a centered stacked carousel that appears on smaller screen sizes. This approach aims to improve usability on mobile devices while also providing a more visually appealing and intuitive browsing experience.",
     websiteLink: "https://elite-cars-rental.vercel.app/",
     githubLink: "https://github.com/J0hnux/nextjs-car-rental",
   },
