@@ -142,13 +142,13 @@ const HeaderPanel = () => {
               {link}
             </a>
           ))}
-          {/* <a
+          <a
             href="https://drive.google.com/file/d/1-q1oczlqwSk-xbfQmXakiI8UsOk-0_sp/view?usp=sharing"
             target="_blank"
             className="resume-btn"
           >
             Resume
-          </a> */}
+          </a>
         </nav>
 
         <button
